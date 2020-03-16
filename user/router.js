@@ -18,7 +18,7 @@ router.post("/login", async function(request, response, next) {
   try {
     const user = await User.findOne({ where: { name } });
     if (!user) {
-      return response.status(400).send("The username is not found");
+      return response.status(400).send("The user is not found");
     }
 
     const correct = bcrypt.compareSync(password, user.password);
