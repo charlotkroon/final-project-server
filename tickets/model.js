@@ -35,3 +35,9 @@ const Ticket = db.define(
 );
 
 module.exports = Ticket;
+
+//Picture has:
+// -price
+// -description
+// -author
+// -picture (optional)

@@ -10,23 +10,17 @@ const Event = db.define("event", {
     type: Sequelize.STRING
     // defaultValue: "a great event with lots of spells",
     // allowNull: false
+  },
+  picture: {
+    type: Sequelize.BLOB
+    // allowNull: true
+  },
+  startDate: {
+    type: Sequelize.DATE
+  },
+  endDate: {
+    type: Sequelize.DATEONLY
   }
 });
-// picture: {
-//   type: Sequelize.BLOB
-//   // allowNull: true
-
-// startDate: {
-//   type: Sequelize.DATEONLY
-//   // allowNull: false
-// },
-// endDate: {
-//   type: Sequelize.DATEONLY
-//   // allowNull: false
-
-//   timestamps: false,
-//   tableName: "event"
-// }
-// );
 
 module.exports = Event;
