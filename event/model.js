@@ -12,4 +12,4 @@ const Tickets = db.define("ticket", {
   price: Sequelize.INTEGER
 });
 
-module.exports = Family;
+module.exports = Tickets;
