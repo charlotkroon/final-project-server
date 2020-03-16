@@ -1,8 +1,8 @@
 const { Router } = require("express");
 const Ticket = require("./model");
 const auth = require("../auth/middleware");
-
 const router = new Router();
+
 router.get("/ticket", (req, res, next) => {
   Ticket.findAll()
     .then(tickets => res.send(tickets))

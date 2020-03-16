@@ -1,15 +1,35 @@
 const Sequelize = require("sequelize");
 const db = require("../db");
 
-const Tickets = db.define("ticket", {
-  name: Sequelize.STRING,
-  location: {
-    type: Sequelize.STRING,
-    defaultValue: "everywhere",
-    allowNull: false
+const Event = db.define(
+  "event",
+  {
+    name: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
+    description: {
+      type: Sequelize.STRING,
+      defaultValue: "a great event with lots of spells",
+      allowNull: false
+    },
+    picture: {
+      type: Sequelize.BLOB,
+      allowNull: true
+    },
+    startdate: {
+      type: Sequelize.DATEONLY,
+      allowNull: false
+    },
+    enddate: {
+      type: Sequelize.DATEONLY,
+      allowNull: false
+    }
   },
-  date: Sequelize.INTEGER,
-  price: Sequelize.INTEGER
-});
+  {
+    timestamps: false,
+    tableName: "event"
+  }
+);
 
-module.exports = Tickets;
+module.exports = Event;
