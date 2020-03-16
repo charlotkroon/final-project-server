@@ -30,7 +30,7 @@ const Ticket = db.define(
   },
   {
     timestamps: false,
-    tableName: "users"
+    tableName: "tickets"
   }
 );
 
