@@ -1,9 +1,11 @@
 const cors = require("cors");
 const express = require("express");
+const bodyParser = require("body-parser");
 
-//Routers
+const parserMiddleware = bodyParser.json();
 const userRouter = require("./user/router");
 const authRouter = require("./auth/router");
+const ticketRouter = require("./tickets/router");
 
 const app = express();
 
@@ -20,8 +22,11 @@ app.get("/test", (request, response) => {
   response.send(name);
 });
 
+app.use(corsMiddleware);
+app.use(parserMiddleware);
 app.use(userRouter);
 app.use(authRouter);
+app.use(ticketRouter);
 
 const port = process.env.PORT || 4000;
 
