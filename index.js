@@ -3,6 +3,7 @@ const express = require("express");
 
 //Routers
 const userRouter = require("./user/router");
+const authRouter = require("./auth/router");
 
 const app = express();
 
@@ -20,8 +21,9 @@ app.get("/test", (request, response) => {
 });
 
 app.use(userRouter);
+app.use(authRouter);
 
-port = 4000;
+const port = process.env.PORT || 4000;
 
 function confirm() {
   console.log(`Listening on :${port}`);
