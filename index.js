@@ -11,6 +11,8 @@ const eventRouter = require("./event/router");
 const app = express();
 
 const corsMiddleware = cors();
+app.use(corsMiddleware);
+
 const jsonParser = express.json();
 
 app.get("/test", (request, response) => {
