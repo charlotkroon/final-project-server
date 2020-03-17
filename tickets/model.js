@@ -1,30 +1,28 @@
 const Sequelize = require("sequelize");
 const db = require("../db");
 
+const Event = require("../event/model");
+const User = require("../user/model");
+
 const Ticket = db.define(
   "ticket",
   {
-    event: {
-      type: Sequelize.STRING,
-      allowNull: false
-    },
     author: {
-      type: Sequelize.STRING,
+      type: Sequelize.TEXT,
       defaultValue: "harry potter",
       allowNull: false
     },
     description: {
-      type: Sequelize.STRING,
+      type: Sequelize.TEXT,
       defaultValue: "a great event with lots of spells",
       allowNull: false
     },
     picture: {
-      type: Sequelize.BLOB,
+      type: Sequelize.STRING,
       allowNull: true
     },
     price: {
-      type: Sequelize.FLOAT,
-      defaultValue: 5.0,
+      type: Sequelize.DECIMAL,
       allowNull: false
     }
   },
@@ -33,6 +31,9 @@ const Ticket = db.define(
     tableName: "tickets"
   }
 );
+
+Ticket.belongsTo(Event);
+Ticket.belongsTo(User);
 
 module.exports = Ticket;
 
