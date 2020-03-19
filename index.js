@@ -1,36 +1,25 @@
-// import external dependencies
-const cors = require("cors");
 const express = require("express");
-const ticketRouter = require("./tickets/router");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+
 const eventRouter = require("./event/router");
 const userRouter = require("./user/router");
+const loginRouter = require("./auth/router");
+const ticketRouter = require("./tickets/router");
 
 const app = express();
 
-//cors always has to be the first middleware, nothing else can happen before cors. you need to unlock the request (security)
+const port = 4000;
+
 const corsMiddleware = cors();
-app.use(corsMiddleware); //now it's unshielded/unlocked
+const parserMiddleware = bodyParser.json();
 
-const parser = express.json();
-app.use(parser);
-
-app.get("/test", (request, response) => {
-  console.log("req.body test:", request.body);
-  const { name } = request.body;
-
-  response.send(name);
-});
-
-app.use(userRouter);
-app.use(ticketRouter);
+app.use(corsMiddleware, parserMiddleware);
 app.use(eventRouter);
+app.use(userRouter);
+app.use(loginRouter);
+app.use(ticketRouter);
 
-port = process.env.PORT || 4000;
-
-// confirmation callback
-function confirm() {
-  console.log(`Listening on :${port}`);
-}
-
-// Start the server
-app.listen(port, confirm);
+app.listen(port, () =>
+  console.log(`Ticket Appie is listening to port ${port}`)
+);

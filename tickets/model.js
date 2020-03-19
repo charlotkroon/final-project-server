@@ -5,30 +5,23 @@ const Event = require("../event/model");
 const User = require("../user/model");
 
 const Ticket = db.define(
-  "ticket",
+  "tickets",
   {
-    author: {
-      type: Sequelize.TEXT,
-      defaultValue: "harry potter",
-      allowNull: false
-    },
     description: {
       type: Sequelize.TEXT,
-      defaultValue: "a great event with lots of spells",
       allowNull: false
     },
     picture: {
       type: Sequelize.STRING,
       allowNull: true
     },
-    price: {
-      type: Sequelize.DECIMAL,
+    author: {
+      type: Sequelize.TEXT,
       allowNull: false
     }
   },
   {
-    timestamps: false,
-    tableName: "tickets"
+    timestamps: true
   }
 );
 
@@ -36,9 +29,3 @@ Ticket.belongsTo(Event);
 Ticket.belongsTo(User);
 
 module.exports = Ticket;
-
-//Picture has:
-// -price
-// -description
-// -author
-// -picture (optional)

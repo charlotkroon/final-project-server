@@ -1,21 +1,22 @@
 const Sequelize = require("sequelize");
 const db = require("../db");
+
 const User = require("../user/model");
 
 const Event = db.define(
-  "event",
+  "events",
   {
     name: {
-      type: Sequelize.STRING,
+      type: Sequelize.TEXT,
       allowNull: false
     },
     description: {
       type: Sequelize.TEXT,
       allowNull: false
     },
-    picture: {
+    logo: {
       type: Sequelize.STRING,
-      allowNull: true
+      allowNull: false
     },
     startDate: {
       type: Sequelize.DATE,
@@ -27,7 +28,7 @@ const Event = db.define(
     }
   },
   {
-    timestamps: false,
+    timestamps: true,
     updatedAt: false
   }
 );
