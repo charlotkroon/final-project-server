@@ -32,11 +32,15 @@ X - a description
 ​
 When you click on a ticket, you see
 
-- the details of that ticket (description/price)
+X- the details of that ticket (description/price)
+
 - and which event it's for. On this page you can add comments as a customer,
-- and everybody can see all the comments.
+- TO FIX !!!! and everybody can see all the comments.
   ​
-  A comment has a text and is connected to a specific ticket. It also has an author.
+  A comment has
+  X a text
+  X and is connected to a specific ticket
+  X It also has an author.
   ​
   Anybody can view events and tickets, but you have to login to add a new ticket or comment.
   ​

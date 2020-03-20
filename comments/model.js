@@ -7,12 +7,12 @@ const Ticket = require("../tickets/model");
 const Comment = db.define(
   "comment",
   {
-    comment: {
-      type: Sequelize.TEXT,
+    message: {
+      type: Sequelize.STRING,
       allowNull: false
     },
     author: {
-      type: Sequelize.TEXT,
+      type: Sequelize.STRING,
       allowNull: false
     }
   },

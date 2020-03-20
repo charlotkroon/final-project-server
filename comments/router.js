@@ -25,7 +25,7 @@ router.get("/comments", async (req, res, next) => {
 });
 
 //post 1 comment
-router.post("./comments/:ticketId", async (req, res, next) => {
+router.post("/comments/:ticketId", async (req, res, next) => {
   const userId = req.user.id;
   const { ticketId } = req.params;
   const comment = { comment: req.body.comment, author: req.body.author };
