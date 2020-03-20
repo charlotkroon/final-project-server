@@ -18,6 +18,10 @@ const Ticket = db.define(
     author: {
       type: Sequelize.TEXT,
       allowNull: false
+    },
+    price: {
+      type: Sequelize.DECIMAL,
+      allowNull: false
     }
   },
   {

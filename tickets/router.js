@@ -16,6 +16,7 @@ router.post("/events/:eventId/ticket", async (req, res, next) => {
     description: req.body.description,
     picture: req.body.picture,
     author: req.body.author,
+    price: req.body.price,
     eventId: eventId
   };
   const newTicket = await Ticket.create(ticket);

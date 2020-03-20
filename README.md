@@ -16,20 +16,25 @@ The app should have a login and signup page for customers. You need to login to 
 ​
 Events have:
 
-- a name
-- a description
-- a picture or logo
-- a start and end date (could be the same)
-  ​
-  After you click on an event, you see a list of tickets that are offered for this event.
-  ​
-  A ticket is made for a specific event and has an author (the user that created the ticket). Apart from that, it has:
-  ​
-- a picture of the ticket (optional field)
-- a price
-- a description
-  ​
-  When you click on a ticket, you see the details of that ticket (description/price) and which event it's for. On this page you can add comments as a customer, and everybody can see all the comments.
+X a name
+X a description
+X a picture or logo
+X a start and end date (could be the same)
+​
+After you click on an event, you see
+X a list of tickets that are offered for this event.
+​
+A ticket is made for a specific event and has an author (the user that created the ticket). Apart from that, it has:
+​
+X - a picture of the ticket (optional field)
+X - a price
+X - a description
+​
+When you click on a ticket, you see
+
+- the details of that ticket (description/price)
+- and which event it's for. On this page you can add comments as a customer,
+- and everybody can see all the comments.
   ​
   A comment has a text and is connected to a specific ticket. It also has an author.
   ​
