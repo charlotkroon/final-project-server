@@ -3,6 +3,7 @@ const db = require("../db");
 
 const Event = require("../event/model");
 const User = require("../user/model");
+// const Comment = require("../comments/model");
 
 const Ticket = db.define(
   "tickets",
@@ -11,7 +12,7 @@ const Ticket = db.define(
       type: Sequelize.TEXT,
       allowNull: false
     },
-    picture: {
+    logo: {
       type: Sequelize.STRING,
       allowNull: true
     },
@@ -31,5 +32,6 @@ const Ticket = db.define(
 
 Ticket.belongsTo(Event);
 Ticket.belongsTo(User);
+// Ticket.hasMany(Comment);
 
 module.exports = Ticket;

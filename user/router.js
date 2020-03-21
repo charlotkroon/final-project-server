@@ -1,22 +1,26 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const User = require("./model");
+const auth = require("../auth/middleware");
 
 const router = express.Router();
 
-async function addUser(req, res, next) {
-  try {
-    const email = req.body.email;
-    const password = bcrypt.hashSync(req.body.password, 10);
+router.get("/users", async (req, res, next) => {
+  const allUsers = await User.findAll();
+  res.send(allUsers);
+});
 
-    const addUser = await User.create({ email, password });
+router.post("/user", auth, async (req, res, next) => {
+  console.log("userrr", req.user);
+  const user = {
+    email: req.body.email,
+    password: bcrypt.hashSync(req.body.password, 10)
+  };
 
-    res.send(addUser);
-  } catch (error) {
-    next(error);
+  if (user.password && user.email) {
+    const newUser = await User.create(user);
+
+    res.send(newUser);
   }
-}
-
-router.post("/user", addUser);
-
+});
 module.exports = router;

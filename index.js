@@ -14,7 +14,6 @@ const port = 4000;
 
 const corsMiddleware = cors();
 const parserMiddleware = bodyParser.json();
-
 app.use(corsMiddleware, parserMiddleware);
 app.use(eventRouter);
 app.use(userRouter);
