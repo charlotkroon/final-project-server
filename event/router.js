@@ -10,7 +10,7 @@ router.get("/events", async (req, res, next) => {
 });
 
 router.post("/event", auth, async (req, res, next) => {
-  console.log("hallo?! reqje??");
+  console.log("hallo?! reqje??", req.user);
   const event = {
     name: req.body.name,
     description: req.body.description,

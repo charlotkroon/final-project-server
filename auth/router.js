@@ -6,13 +6,15 @@ const auth = require("./middleware");
 
 const router = new Router();
 
-router.post("/login", (req, res, next) => {
-  const { password, email } = req.body;
+function login(req, res, next) {
+  const email = req.body.email;
+  const password = req.body.password;
 
   if (!email || !password) {
     res.status(400).send({
       message: "Please supply a valid email and password."
     });
+  } else {
     // 1. find user based on email address
     User.findOne({
       where: {
@@ -44,7 +46,9 @@ router.post("/login", (req, res, next) => {
         });
       });
   }
-});
+}
+
+router.post("/login", login);
 
 router.get("/secret-endpoint", auth, (req, res) => {
   res.send({
