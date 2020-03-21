@@ -17,9 +17,7 @@ function login(req, res, next) {
   } else {
     // 1. find user based on email address
     User.findOne({
-      where: {
-        email: req.body.email
-      }
+      where: { email: req.body.email }
     })
       .then(entity => {
         if (!entity) {
@@ -55,5 +53,4 @@ router.get("/secret-endpoint", auth, (req, res) => {
     message: `Thanks for visiting the secret endpoint ${req.user.email}.`
   });
 });
-
 module.exports = router;
