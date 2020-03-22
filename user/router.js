@@ -15,4 +15,15 @@ async function addUser(req, res, next) {
 }
 router.post("/users", addUser);
 
+async function getUsers(request, response, next) {
+  try {
+    const fetchUser = await User.findAll();
+
+    response.json(fetchUser);
+  } catch (error) {
+    next(error);
+  }
+}
+router.get("/users", getUsers);
+
 module.exports = router;

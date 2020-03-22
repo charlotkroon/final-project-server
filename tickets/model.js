@@ -32,6 +32,5 @@ const Ticket = db.define(
 
 Ticket.belongsTo(Event);
 Ticket.belongsTo(User);
-// Ticket.hasMany(Comment);
 
 module.exports = Ticket;

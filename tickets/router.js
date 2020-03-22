@@ -6,8 +6,12 @@ const router = new Router();
 
 router.get("/events/:eventId/tickets", async (req, res, next) => {
   const { eventId } = req.params;
+  const allTickets = await Ticket.findAll({ where: { eventId } });
+  res.send(allTickets);
+});
+
+router.get("/ticketsList", async (req, res, next) => {
   const allTickets = await Ticket.findAll();
-  ({ where: { eventId } });
   res.send(allTickets);
 });
 
