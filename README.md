@@ -16,33 +16,35 @@ The app should have a login and signup page for customers. You need to login to 
 ​
 Events have:
 
-X a name
-X a description
-X a picture or logo
-X a start and end date (could be the same)
+XXXXX a nameXXXX
+XXXXa descriptionXXXX
+XXXXa picture or logoXXXX
+XXXXa start and end date (could be the same)XXXX
 ​
 After you click on an event, you see
-X a list of tickets that are offered for this event.
+XXXX a list of tickets that are offered for this event.XXXX
 ​
-A ticket is made for a specific event and has an author (the user that created the ticket). Apart from that, it has:
-​
-X - a picture of the ticket (optional field)
-X - a price
-X - a description
-​
+XXXXA ticket is made for a specific eventXXXX
+XXXXand has an author (the user that created the ticket).
+Apart from that, it has:
+XXXX- a picture of the ticket (optional field) XXXX
+XXXX - a price XXXX
+XXXX - a description XXXX
 When you click on a ticket, you see
 
-X- the details of that ticket (description/price)
+XXXX- the details of that ticket (description/price)XXXX
 
 - and which event it's for. On this page you can add comments as a customer,
-- TO FIX !!!! and everybody can see all the comments.
+  XXXXTO FIX !!!! and everybody can see all the commentsXXXX
   ​
   A comment has
-  X a text
+  XXXX a text XXXX
   X and is connected to a specific ticket
-  X It also has an author.
+  XXXXIt also has an authorXXXX
   ​
-  Anybody can view events and tickets, but you have to login to add a new ticket or comment.
+  XXXX- Anybody can view events and ticketsXXXX
+  XXXX- but you have to login to add a new ticket
+  XXXX- or comment.XXXX
   ​
   ![Mockup of some pages of the app](https://cd.sseu.re/final-assignment-mockup.png)
   ​
@@ -62,17 +64,17 @@ On the ticket page for a specific ticket, we want to show a text like:
 > The percentage should be calculated using the following algorithm:
 > ​
 
-- if the ticket is the only ticket of the author, add 10%
-- if the ticket price is lower than the average ticket price for that event, that's a risk
-  _ if a ticket is X% cheaper than the average price, add X% to the risk
-  _ if a ticket is X% more expensive than the average price, deduct X% from the risk, with a maximum of 10% deduction
-- if the ticket was added during business hours (9-17), deduct 10% from the risk, if not, add 10% to the risk
-- if there are >3 comments on the ticket, add 5% to the risk
-  ​
-  The minimal risk is 5% (there's no such thing as no risk) and the maximum risk is 95%.
-  ​
-  The calculated risk of a ticket depends on many factors. Make sure that the risk value is always "live" (i.e. up to date).
-  ​
+XXXXif the ticket is the only ticket of the author, add 10%XXXX
+XXXXif the ticket price is lower than the average ticket price for that event, that's a riskXXXX
+XXXXif a ticket is X% cheaper than the average price, add X% to the riskXXXX
+XXXXif a ticket is X% more expensive than the average price, deduct X% from the risk, with a maximum of 10% deductionXXXX
+XXXXif the ticket was added during business hours (9-17), deduct 10% from the risk, if not, add 10% to the riskXXXX
+XXXXif there are >3 comments on the ticket, add 5% to the riskXXXX
+​
+XXXXThe minimal risk is 5% (there's no such thing as no risk) and the maximum risk is 95%.XXXX
+​
+The calculated risk of a ticket depends on many factors. Make sure that the risk value is always "live" (i.e. up to date).
+​
 
 ## User stories
 
@@ -108,7 +110,8 @@ Feel free to add any packages that you like. E.g. [MaterialUI](https://material-
 You will receive a time slot for a final evaluation talk on Friday. **Before** you show up on Friday, you should share the code of your assignment (frontend + backend) by adding the evaluator as a collaborator to your project.
 ​
 
-- create a **PRIVATE** (this is _very_ important) GitHub repository
+XXXXXX create a **PRIVATE** (this is _very_ important) GitHub repository XXXXX
+
 - push your assignment to it regularly (so even if your computer breaks you will have a backup and we can see your progress!)
 - You will be asked to demo your application. Make sure you have everything running on your laptop before the start of the evaluation session.
 - Make sure your database contains enough data to demo the app (more than 9 events, events in the past, tickets that are low risk, tickets that are high risk, etc.)

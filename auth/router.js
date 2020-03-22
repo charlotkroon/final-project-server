@@ -15,7 +15,6 @@ function login(req, res, next) {
       message: "Please supply a valid email and password."
     });
   } else {
-    // 1. find user based on email address
     User.findOne({
       where: { email: req.body.email }
     })
@@ -24,10 +23,7 @@ function login(req, res, next) {
           res.status(400).send({
             message: "User with that email does not exist"
           });
-        }
-        // 2. use bcrypt.compareSync to check the password against the stored hash
-        else if (bcrypt.compareSync(req.body.password, entity.password)) {
-          // 3. if the password is correct, return a JWT with the userId of the user (user.id)
+        } else if (bcrypt.compareSync(req.body.password, entity.password)) {
           res.send({
             jwt: toJWT({ userId: entity.id })
           });
