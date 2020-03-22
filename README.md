@@ -1,3 +1,11 @@
+TO DO:
+
+- Pagination (- As a customer I want to see max. 9 events on a page and be able to click 'next' to see more pages of events if there are more )
+- As a customer I only want to see events that are not finished yet
+- As a customer I want to view ticket details when I click on a ticket in the ticket list
+- As an author of the ticket I want to be able to edit a ticket's description, price and picture (other logged in customers cannot do this! only the user
+- As a customer I can see some color (red/yellow/green) indicating the fraud risk of a ticket for all tickets in the all tickets list
+
 # Final Assignment #35
 
 _We will use the results of this assignment for a formal and final evaluation and as such you should write the code individually. Plagiarism is a violation of the Academy contract and you will receive and invoice for the course if you do it._
@@ -16,10 +24,10 @@ The app should have a login and signup page for customers. You need to login to 
 ​
 Events have:
 
-XXXXX a nameXXXX
-XXXXa descriptionXXXX
-XXXXa picture or logoXXXX
-XXXXa start and end date (could be the same)XXXX
+Xa name
+Xa description
+Xa picture or logo
+Xa start and end date (could be the same)
 ​
 After you click on an event, you see
 XXXX a list of tickets that are offered for this event.XXXX
@@ -57,24 +65,23 @@ _This is an important part of the assignment. If you only finish one thing, it s
 Tickets can be fraudulent, and as a customer I don't want to buy a fake ticket! So, we want to show customers the risk that they are taking when buying the ticket.
 ​
 On the ticket page for a specific ticket, we want to show a text like:
-​
+X "We calculated that the risk of this ticket being a fraud is XX%"
 
-> "We calculated that the risk of this ticket being a fraud is XX%"
 > ​
 > The percentage should be calculated using the following algorithm:
 > ​
-
-XXXXif the ticket is the only ticket of the author, add 10%XXXX
-XXXXif the ticket price is lower than the average ticket price for that event, that's a riskXXXX
-XXXXif a ticket is X% cheaper than the average price, add X% to the riskXXXX
-XXXXif a ticket is X% more expensive than the average price, deduct X% from the risk, with a maximum of 10% deductionXXXX
-XXXXif the ticket was added during business hours (9-17), deduct 10% from the risk, if not, add 10% to the riskXXXX
-XXXXif there are >3 comments on the ticket, add 5% to the riskXXXX
-​
-XXXXThe minimal risk is 5% (there's no such thing as no risk) and the maximum risk is 95%.XXXX
-​
-The calculated risk of a ticket depends on many factors. Make sure that the risk value is always "live" (i.e. up to date).
-​
+> Xif the ticket is the only ticket of the author, add 10%XXXX
+> Xif the ticket price is lower than the average ticket price for that event, that's a riskXXXX
+> Xif a ticket is X% cheaper than the average price, add X% to the riskXXXX
+> Xif a ticket is X% more expensive than the average price, deduct X% from the risk, with a maximum of 10% deductionXXXX
+> Xif the ticket was added during business hours (9-17), deduct 10% from the risk, if not, add 10% to the riskXXXX
+> Xif there are >3 comments on the ticket, add 5% to the riskXXXX
+> ​
+> XThe minimal risk is 5% (there's no such thing as no risk) and the maximum risk is 95%.XXXX
+> ​
+> The calculated risk of a ticket depends on many factors.
+> XMake sure that the risk value is always "live" (i.e. up to date).
+> ​
 
 ## User stories
 
@@ -82,13 +89,13 @@ The calculated risk of a ticket depends on many factors. Make sure that the risk
 
 - As a customer I want to see max. 9 events on a page and be able to click 'next' to see more pages of events if there are more
 - As a customer I only want to see events that are not finished yet
-- As a customer I want to view a list of tickets when I click on an event
+  X - As a customer I want to view a list of tickets when I click on an event
 - As a customer I want to view ticket details when I click on a ticket in the ticket list
-- As a customer I want to see what the fraud-risk is for a specific ticket
-- As a customer I want to be able to login, or sign up if I don't have an account yet
-- As a logged in customer I want to add a ticket (for a specific event) that shows up on the event page with a title, picture, price and description
+  X - As a customer I want to see what the fraud-risk is for a specific ticket
+  X- As a customer I want to be able to login, or sign up if I don't have an account yet
+  X- As a logged in customer I want to add a ticket (for a specific event) that shows up on the event page with a title, picture, price and description
 - As an author of the ticket I want to be able to edit a ticket's description, price and picture (other logged in customers cannot do this! only the user that created the ticket can edit it)
-- As a logged in customer I want to be able to create events with a name, picture (logo), date and description
+  X- As a logged in customer I want to be able to create events with a name, picture (logo), date and description
 - As a customer I can see some color (red/yellow/green) indicating the fraud risk of a ticket for all tickets in the all tickets list
   ​
 

@@ -14,7 +14,7 @@ const Ticket = db.define(
     },
     logo: {
       type: Sequelize.STRING,
-      allowNull: true
+      allowNull: false
     },
     author: {
       type: Sequelize.TEXT,
